@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <title>{{$title ?? 'Fofinhos SA | Vehicles'}}</title>
 </head>
 <body class="bg-gray-300">

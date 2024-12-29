@@ -182,9 +182,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
-            
-            <script src="{{ asset('js/script.js') }}"></script>
+            </div>            
         </aside>     
              
         <section class="md:col-span-4">
@@ -218,10 +216,10 @@
                                             @if(!empty($driver['drivingHistory']))
                                                 <li class="mb-2">
                                                     <strong class="text-xm bg-orange-200 rounded py-1">Driving History:</strong>
-                                                    <ul>
+                                                    <ul id="driving-history">
                                                         @foreach($driver['drivingHistory'] as $drivingHistory)
-                                                            <li><strong>Start Date:</strong> {{ $drivingHistory['dateInit'] }}</li>
-                                                            <li><strong>End Date:</strong> {{ $drivingHistory['dateEnd'] }}</li>
+                                                            <li><strong>Start Date:</strong> <span class="date-format">{{ $drivingHistory['dateInit'] }}</span></li>
+                                                            <li><strong>End Date:</strong> <span class="date-format">{{ $drivingHistory['dateEnd'] }}</span></li>
                                                             <li><strong>Start Mileage:</strong> {{ $drivingHistory['startMileage'] }}</li>
                                                             <li><strong>End Mileage:</strong> {{ $drivingHistory['endMileage'] }}</li>
                                                         @endforeach
