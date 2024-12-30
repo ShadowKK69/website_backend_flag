@@ -213,21 +213,17 @@
                                             <li class="mb-2">
                                                 <strong>Vehicle Plate:</strong> {{ $driver['vehiclePlate'] }}
                                             </li>
-                                            @if(!empty($driver['drivingHistory']))
-                                                <li class="mb-2">
-                                                    <strong class="text-xm bg-orange-200 rounded py-1">Driving History:</strong>
-                                                    <ul id="driving-history">
-                                                        @foreach($driver['drivingHistory'] as $drivingHistory)
-                                                            <li><strong>Start Date:</strong> <span class="date-format">{{ $drivingHistory['dateInit'] }}</span></li>
-                                                            <li><strong>End Date:</strong> <span class="date-format">{{ $drivingHistory['dateEnd'] }}</span></li>
-                                                            <li><strong>Start Mileage:</strong> {{ $drivingHistory['startMileage'] }}</li>
-                                                            <li><strong>End Mileage:</strong> {{ $drivingHistory['endMileage'] }}</li>
-                                                        @endforeach
-                                                    </ul>
-                                                </li>
-                                            @else
-                                                <li class="text-red-500">No driving history available.</li>
-                                            @endif
+                                            <li class="mb-2">
+                                                <strong class="text-xm bg-orange-200 rounded py-1">Driving History:</strong>
+                                                <ul id="driving-history">
+                                                    @foreach($driver['drivingHistory'] as $drivingHistory)
+                                                        <li><strong>Start Date:</strong> <span class="date-format">{{ $drivingHistory['dateInit'] }}</span></li>
+                                                        <li><strong>End Date:</strong> <span class="date-format">{{ $drivingHistory['dateEnd'] }}</span></li>
+                                                        <li><strong>Start Mileage:</strong> {{ $drivingHistory['startMileage'] }}</li>
+                                                        <li><strong>End Mileage:</strong> {{ $drivingHistory['endMileage'] }}</li>
+                                                    @endforeach
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </div>
                                 @endforeach

@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const date = document.querySelectorAll(".date-format");
     date.forEach(e => {
         const originalDate = e.textContent;
-        const formattedDate = moment(originalDate).format("DD/MM/YY");
+        const formattedDate = moment(originalDate).format("DD/MM/YYYY");
         e.textContent = formattedDate;
     });
-    
+
     const modal = document.getElementById('add-driver-modal');
     const openModalBtn = document.getElementById('open-modal');
     const cancelBtn = document.getElementById('cancel-button');
